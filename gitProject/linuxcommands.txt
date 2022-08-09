@@ -1,0 +1,72 @@
+
+Practice the following linux commands and concepts-
+1. How to display the user manual of any command - Use  man [COMMAND NAME]
+2. How to list files in a Directory - Use ls
+3. How to change current working directory- Use cd [directory name]
+4. How to get current working directory - Use pwd
+5. How to create new directory/directories - Use mkdir [directory name]
+6. How to remove directory/directories - Use rmdir [directory name] or rm -rf [directory name]
+7. How to copy, move and rename files or directories - Use cp [source file] [destination] to copy and Use mv [old_name] [new_name]  to rename
+8. How to create files - Use nano filename.txt
+9. How to find files or folders- Use find command ,
+for example - find /home/user1 -name elearning 
+As per the above command, we are finding the “elearning” files in the “/home/user1” location.
+
+10. Hard Links and Soft Links - 
+ 
+Hard Links -Hard links directly link two files in the same file system
+             ln” command is utilized to generate a hard link
+             The removal of the original file does not influence the hard linked file, and a hard linked file will remain
+ Soft Links -Soft links are usually an alternative path (or an alias) for the original file
+             If the target file is deleted the soft link dangles which means it points nowhere and generates an error message
+             As against, the command used for a soft link is “ln -s“. 
+11. How to zip and unzip files -
+
+Zip - This command creates a .zip archive of all the files in a directory.
+      zip some_folder.zip some_folder/*
+Unzip - unzip some_folder.zip
+
+
+12. tar command- Tar command is used  to create compressed or uncompressed Archive files and also maintain and modify them.
+    tar [options] [archive-file] [file or directory to be archived]
+ 
+13. cat command - To display contents of a file - cat filename
+14. head and tail commands - Used to display upto a certain limit
+15. grep command - used for searching , like with history , history | grep docker , will give the list of commands with "docker" in history.
+
+16. chown and chmod commands
+    Chown - To change owner of the file:
+    chown owner_name file_name
+    Chmod Changes Mod
+    Chmod 700 file.txt 
+
+17. du and df commands - 
+    The df command shows the disk space usage on all the currently mounted file systems
+    This Disk Usage command (du) displays how much disk space a directory is occupying.
+
+18. history command - shows history
+
+19. su and sudo commands Used to access root priviledges
+
+20. ping command -
+    The ping command is a Command Prompt command used to test the ability of the source computer to reach a specified destination computer
+
+21. who and whoami commands 
+    who - It displays a list of the logged-in user names.
+    whoami - Current User
+
+22. nano editor- Text Editor 
+
+23. Absolute and Relative Paths
+    Absolute Path. An absolute address refers to a document or folder’s address independent of the current working directory; in actuality, it is related to a root folder.
+    Relative Path. A relative path specifies where a document or directory is located concerning the current working directory.
+
+24. Wildcards 
+    There are three main wildcards in Linux:
+
+     An asterisk (*) – matches one or more occurrences of any character, including no character.
+     Question mark (?) – represents or matches a single occurrence of any character. so, it matches exactly one charecter
+     Bracketed characters ([ ]) – matches any occurrence of character enclosed in the square brackets. It is possible to use different types of characters (alphanumeric characters): numbers, letters, other special characters etc.
+
+
+
