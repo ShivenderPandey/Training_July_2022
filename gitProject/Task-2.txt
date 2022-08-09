@@ -1,0 +1,63 @@
+Task-2: 
+Create a bash script to input the number of databases
+Create mysql user and password
+Restore dump in all the databases
+Create Dockerfile 
+USE base image as jrei/systemd-debian:buster
+Install mariadb  10.5.16 in image
+Copy that bash script in dockerfile
+Build the image
+
+
+Tasks Solution:
+
+Create a bash script to input the number of databases : 
+	
+	To create bash script file : 
+		touch newfile.sh
+
+	Inside sh file write:
+		echo "enter the database number"
+		read n
+		for ((i=1; i<=n; i++ ));
+		do
+        		mysql -e "create database newdb$i"        //creating databases upto n 
+        		mysql dump newdb$i < k8-tata-db.sql		//dumping the mysql file into all the databases
+		done
+
+
+Create mysql user and password :
+	Command : mysql -u root -p        			//it will give you access to the root user now go forward to create new client
+		  CREATE USER 'username'@'host' IDENTIFIED WITH authentication_plugin BY 'password';
+
+ 
+Restore dump in all the databases : restoring of dump file is already done in sh file and whenever that file will call then database creation and restore of dump file will be perform 
+
+
+Create Dockerfile : 
+	create dockerfile using : 
+		touch dockerfile
+
+USE base image as jrei/systemd-debian:buster : 
+	inside dockerfile write: 
+		FROM jrei/systemd-debian:buster
+
+Install mariadb 10.5.16 in image : 
+		apt -y update
+		apt -y install curl software-properties-common gnupg2
+		apt -y upgradeRun apt -y install
+		curl -LsS -O https://downloads.mariadb.com/MariaDB/mariadb_repo_setup
+		bash mariadb_repo_setup --mariadb-server-version=10.5
+		apt update
+		apt install mariadb-server mariadb-client
+		mariadb-secure-installation
+		
+
+Copy that bash script in dockerfile : 
+		COPY newfile.sh ./
+
+Build the image:
+	docker build -it imagename .           //this dot present the path of the dockerfile 
+
+After image building just run the image : docker run -d imagename 
+that't it thank you!!
