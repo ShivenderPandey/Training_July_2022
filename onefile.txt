@@ -1,3 +1,0 @@
-now deleted the 2nd editing and putting 3rd editing
-again this file is created in newbrnch branch
-edit to check the gitignore
